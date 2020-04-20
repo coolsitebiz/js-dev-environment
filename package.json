@@ -2,7 +2,11 @@
 	"name": "js-dev-environment",
 	"version": "1.0.0",
 	"description": "JavaScript development environment",
-	"scripts": {},
+	"scripts": {
+		"prestart": "node buildScripts/startMessage.js",
+		"start": "npm-run-all --parallel open:src",
+		"open:src": "node buildScripts/srcServer.js"
+	},
 	"author": "Cory House",
 	"license": "MIT",
 	"dependencies": {
